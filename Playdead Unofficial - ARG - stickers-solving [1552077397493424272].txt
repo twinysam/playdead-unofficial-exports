@@ -1,0 +1,2509 @@
+==============================================================
+Guild: Playdead Unofficial
+Channel: ARG / stickers-solving
+Topic: Attempting to crack the code found in the stickers: https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md
+==============================================================
+
+[9/22/2026 7:03 PM] santiface (pinned)
+For the latest info on stickers found check: https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md
+
+For some of the latest discussions on trying to figure out the code/message: https://discord.com/channels/460626942190813184/461275582970462209/1503887699898011688
+
+{Reactions}
+🔥 (2)
+
+[9/22/2026 7:04 PM] santiface
+Pinned a message.
+
+
+[9/22/2026 8:14 PM] darkmatter_11
+https://discord.com/channels/460626942190813184/463106924708233216/1551828539710504980 This one is a possibly new observation: if we arrange the symbols as 9x9 + 5x5 (it's possible that there are only 106 symbols), then the 5x5 might be just grey-yellow-yellow-yellow-yellow repeating 5 times.
+
+{Attachments}
+assets\image-b2ac66eb5041ee3f.png
+
+{Reactions}
+🩷 (2)
+
+[9/22/2026 8:14 PM] darkmatter_11
+Would be nice to get a new sticker in that yellow range to confirm/deny this theory
+
+
+[9/24/2026 9:53 PM] lime8159
+I tried looking into the pigpen cipher, it seems like it almost could work for the 27x4 layout
+
+
+[9/24/2026 9:53 PM] lime8159
+
+
+{Attachments}
+assets\27-018158c5211bb155.png
+
+
+[9/24/2026 9:53 PM] lime8159
+the first 3 bits could represent the pigpen shape, and the last bit would indicate whether there was a dot in it or not, hence using a dot as the symbol
+
+
+[9/24/2026 9:53 PM] lime8159
+for reference
+
+{Attachments}
+assets\image-9a326b86cd72ee86.png
+
+
+[9/24/2026 9:54 PM] lime8159
+unfortunately it would need 4 bits to catch all letters instead of 3, unless some letters were purposefully left out
+
+
+[9/24/2026 10:14 PM] squarecones
+idea i wanna throw out there
+
+
+[9/24/2026 10:14 PM] squarecones
+what if the stickers are a language of sorts based on what we decoded from the printers
+
+
+[9/25/2026 2:22 AM] guunnz
+
+
+{Forwarded Message}
+knowing the 108 character long pattern you guys are missing 43 stickers right? no chance there is a pattern inside the pattern right? to be able to "guess" the ones missing
+Originally sent: 9/25/2026 2:20 AM
+
+
+[9/25/2026 2:28 AM] vs8
+Scroll just a bit higher, if 5x5 assumption is right, just maybe we can skip 14 unknown stickers, but that's about it
+
+{Reactions}
+❤️
+
+[9/25/2026 2:29 AM] guunnz
+I hope you can find the stickers! since it would be the easiest solution
+
+
+[9/25/2026 2:52 AM] guunnz
+bruteforcing probably will be possible when 17 aprox are left i think
+
+
+[9/25/2026 3:22 AM] vrevangelist
+I feel we are going to have to start asking people to try to really think hard to remember what symbol at least- and what number if possible they had if destroyed or lost to time
+
+
+[9/25/2026 3:23 AM] vrevangelist
+Including trying to figure out purchase/pre order dates, dates of delivery, and locations. From known ones maybe you can reverse engineer any numbers based on region
+
+
+[9/25/2026 4:03 AM] santiface
+That would be pointless, as that info would be unreliable. For solving this having concrete evidence of what each sticker is or was, is crucial.
+
+
+[9/25/2026 5:12 AM] afluffyseal
+Assuming the pattern repeats every 108 characters, which i think makes most sense to help the community learn the sequence without every sticker, you can then split the 108 characters up into groups based on the different picture in the background to make 9 different 12 character strings. what's interesting about this is that the dots only appear in the last 3 spaces of each string. You then end up with a 9x9 grid which could be interpreted in a lot of different ways but this to me feels similar enough to previous printer images (e.g. the acorn)
+
+{Attachments}
+assets\Screenshot_20260925_091123_Sheets-8bca1332373a1756.jpg
+
+
+[9/25/2026 5:47 AM] vrevangelist
+Then fill in possibilities with others and help correct theoretical ones.
+
+
+[9/25/2026 5:48 AM] vrevangelist
+You’d be in a better position if everyone knew their symbols but not their numbers
+
+
+[9/25/2026 5:48 AM] vrevangelist
+Then where you are now mate
+
+
+[9/25/2026 5:48 AM] vrevangelist
+I under what you’re saying but also think
+
+
+[9/25/2026 5:57 AM] kappa_neuro
+A python program and several variants https://discord.com/channels/460626942190813184/461275582970462209/1504042454150680588
+
+
+[9/25/2026 6:07 AM] afluffyseal
+Why do those variants start at 0 instead of 1?
+
+
+[9/25/2026 6:08 AM] kappa_neuro
+0 is a starting point (not a sticker)
+The images mathematically calculate which stickers are located and with what chance they may end up in different positions, from the data on the stickers that were found earlier
+
+
+[9/25/2026 6:14 AM] lime8159
+Some people have theorized that the dot symbols may represent parity bits or some other type of error correction, hence why they're all found at the end
+
+
+[9/25/2026 6:32 AM] afluffyseal
+I understand, but if the data forms an image, or even a smaller grid of information then  I think the data should start at 1 and square 0 moved to the end as Square 108
+
+
+[9/25/2026 6:34 AM] afluffyseal
+At least for visualising the known  squares
+
+
+[9/25/2026 9:11 AM] kappa_neuro
+You're right, thanks. That 0 cell holds stickers 108/216/324/432/540/648 (324 is a real one, slash, image I), so calling it 0 was just bad labelling
+
+ The program is updated: the grid now runs 1 to 108 and 108 sits at the end
+
+Checked your 9x12 layout against our data, it matches cell for cell
+The dots in the last 3 spots hold for all 7 known dots
+It's the same rule as stickers 1 to 81 being slash or dash and 82 to 108 being slash or dot, your layout just shows it more clearly
+
+The 9x9 part still has 27 of 81 cells unknown, and even with our predicted fill I can't see a shape yet
+
+||Since the acorn only showed up once the printer lines were in the right order, maybe the 9 rows need ordering too, for example by where each background piece sits in the solved 9 piece image||
+
+{Attachments}
+assets\1_layout_known-de14213a22bf9504.png
+assets\2_layout_predicted-69ecdd0592c14e14.png
+assets\3_bitmap_known-e901af9082919911.png
+assets\4_bitmap_predicted-501d4bab0b71598d.png
+
+
+[9/25/2026 9:26 AM] m6lg6
+:insideboy:
+
+
+[9/25/2026 9:48 AM] kappa_neuro
+Updated the sticker program, here is what changed:
+> - Numbering now runs 1 to 108 everywhere, cell 108 comes last
+> The old "0" cell was stickers 108/216/324/432/540/648 (324 is a real one, slash)
+> 
+> - I checked every prediction rule honestly: hide one known cell, let the rule guess it from the other 64, repeat for all 65. 
+> Always guessing the most common symbol of the zone gets 60.0%. The mod 54 rule gets 56.9%, the old main model 52.3%. None of them beat a plain guess, so the old 84.6% claim was wrong
+> 
+> - The old model's confidence was upside down (its most confident guesses were wrong most often), so it is gone. 
+> Guesses are now just pale, and every prediction tab is marked as an experiment with its real score
+> 
+> - Confidence heatmap is now Model check: each known cell is green or red depending on whether the model gets it right when that cell is hidden
+> 
+> - Hard residues is now Wanted stickers: all 43 unknown cells with their 6 sticker numbers each
+> Magenta = inside the 9x9 block (1 to 81), orange = the tail (82 to 108)
+> 
+> - New mode: A Fluffy Seal's layout, 9 rows (background A to I) of 12 stickers, numbers and symbols on the image, known only or with pale guesses
+> 
+> - Header counts updated: 82 stickers found, 42 lost, 35 owners still open
+
+{Attachments}
+assets\New_V_1-5c92e45ffc740ca2.png
+assets\New_V_2-a03dc8abaf5abb57.png
+assets\New_V_3-b5c857ec2c55a079.png
+assets\New_V_4-7d2746f9b2b1bc3a.png
+assets\New_V_5-fd088de801df0d72.png
+assets\New_V_6-e86e3bb6e014566e.png
+
+{Reactions}
+❤️ (3)
+
+[9/25/2026 9:49 AM] kappa_neuro
+
+
+{Attachments}
+assets\sticker_random_gen_New-76238d3b824aa689.py
+
+
+[9/25/2026 11:15 AM] afluffyseal
+One idea i had for ordering the lines is that the last 3 symbols could spell out "41" if arranged like this it would be the same as the acorn, i had a play around with this idea and it is possible with the dots found so far, but there's still too many possible combinations with the current data to arrange the rows, by my rough maths i think there's still 48 ways this can work
+
+{Attachments}
+assets\image-882e15e60d9774d5.png
+assets\image-16788662468d5989.png
+
+
+[9/25/2026 11:34 AM] ashenpoet
+If it *is* intended to be visualised as a coloured grid image like the acorn, does that mean there's no way of solving it without determining what the missing symbols are?
+
+
+[9/25/2026 11:40 AM] ashenpoet
+One of the big questions that's been on mine, and clearly other people's minds, is if the puzzle is designed in a way that means its still solvable with the missing stickers. In their absence we would just have to guess what they are based on maths right?
+
+
+[9/25/2026 11:53 AM] afluffyseal
+I think so, there should be patterns in the correct solution that would help narrow it down, that might be easy if the solution is a word or phrase, or hard though if the solution is just like a random string of letters for a URL
+
+
+[9/25/2026 12:33 PM] darkmatter_11
+We're quite sure they start at 0 because the backgrounds started at 0 mod 9.
+
+{Attachments}
+assets\image-bcdfb5b4cbc61530.png
+
+
+[9/25/2026 12:47 PM] ashenpoet
+They issued a sticker number 000?
+
+
+[9/25/2026 12:48 PM] ashenpoet
+Wait no I'm being stupid
+
+
+[9/25/2026 12:48 PM] ashenpoet
+Where are these numbers from?
+
+
+[9/25/2026 12:51 PM] darkmatter_11
+Those are the sticker numbers (mod 9), like this one goes in the middle left of the 3x3
+
+{Attachments}
+assets\003-1129cbfc544dd6c0.png
+
+
+[9/25/2026 12:51 PM] darkmatter_11
+and yes there is probably a sticker 000
+
+
+[9/25/2026 1:01 PM] ashenpoet
+The sticker that goes in that spot on the grid has a slash symbol on it, not a dash. Is this a duplicate? Or are the symbols on the 3x3 grid incorrect?
+
+
+[9/25/2026 1:02 PM] ashenpoet
+I also can't find a definition for "mod 9" when I search the solving channel, what is that short hand for?
+
+
+[9/25/2026 1:03 PM] lime8159
+short for modulus
+
+
+[9/25/2026 1:03 PM] lime8159
+just means the remainder when divided by 9
+
+
+[9/25/2026 1:04 PM] lime8159
+so the above could be any number that has a remainder of 3 when divided by 9, it could be sticker 003, but it could equally be 012, 021, 030, etc
+
+
+[9/25/2026 1:14 PM] ashenpoet
+So when we say the backgrounds start at 0 mod 9, that's a sticker with a number that gives a remainder of 0 when divided by 9?
+
+Is that the deciding factor on what background each sticker has?
+
+
+[9/25/2026 1:19 PM] lime8159
+yes, exactly
+
+
+[9/25/2026 1:20 PM] lime8159
+the symbols are a different puzzle, which is why sticker 003 might have a dash, but sticker 030 could have a slash, so you could have 2 numbers with different symbols but the same background
+
+
+[9/25/2026 1:25 PM] lime8159
+The sticker puzzle 12x9 format seems to match the early punch cards very closely, they have 3 zone rows, and 9 digit rows, which matches our 3 dot rows and 9 dash rows.
+
+{Attachments}
+assets\image-8ecfeaaae9ded35d.png
+
+{Reactions}
+‼️ 💜
+
+[9/25/2026 1:26 PM] lime8159
+only difference is the zone rows were typically at the top of the punch card instead of the bottom
+
+
+[9/25/2026 7:30 PM] architype_
+i ran a simple c++ script to how long the sticker code could be based on the ones we have rn and how many total stickers would exist if it was that many symbols in the code
+
+{Attachments}
+assets\rn_image_picker_lib_temp_d6322b39-63e6-467-5c39860b01ceb40d.jpg
+
+{Reactions}
+🙏
+
+[9/25/2026 7:31 PM] architype_
+i disregarded code lengths that has literally 0 matches in our current dataset but still could be possible
+
+
+[9/25/2026 7:31 PM] architype_
+let me run that too
+
+
+[9/25/2026 7:38 PM] lime8159
+are you sure about 125, i remember the next highest after 108 being 197
+
+
+[9/25/2026 7:38 PM] architype_
+and apparently there is no code length where it could be possible but our current dataset has no matches
+
+
+[9/25/2026 7:39 PM] architype_
+i checked my  currently know sticker numbers but lemme check again
+
+
+[9/25/2026 7:53 PM] architype_
+ye checked my database its correct
+
+
+[9/25/2026 8:03 PM] architype_
+here is the entire c++ code
+the part where i enter the known codes is spaghetti but i didn't think i would share it so i did it the laziest way possible
+
+{Attachments}
+assets\inside_sticker_code_interval-7459874c016f4e7c.txt
+
+
+[9/25/2026 8:12 PM] lime8159
+
+
+{Attachments}
+assets\125repeat_symbols-da0a124130afd55f.png
+
+
+[9/25/2026 8:12 PM] lime8159
+the above is the data repeated at an interval of 125 symbols
+
+
+[9/25/2026 8:12 PM] lime8159
+you can see there are multiple inconsistencies in it
+
+
+[9/25/2026 8:13 PM] lime8159
+compared to 108
+
+{Attachments}
+assets\108repeat_symbols-49f57c551da6b09f.png
+
+
+[9/25/2026 8:17 PM] vrevangelist
+Shouts
+
+
+[9/25/2026 8:18 PM] architype_
+ok one sec im trying to see where i fucked up
+
+
+[9/25/2026 8:18 PM] architype_
+because this aint even 1 misplaced
+
+
+[9/25/2026 8:20 PM] architype_
+oh i noticed my beef
+
+
+[9/25/2026 8:20 PM] architype_
+i beefed it
+
+
+[9/25/2026 8:20 PM] architype_
+😭
+
+
+[9/25/2026 8:20 PM] vrevangelist
+First step to improving
+
+
+[9/25/2026 8:21 PM] vrevangelist
+That means no matter what even if a flop next time will be better than this time
+
+
+[9/25/2026 8:21 PM] vrevangelist
+Love the avatar
+
+
+[9/25/2026 8:21 PM] vrevangelist
+Vrchat bio jokes haha? With the rendering
+
+
+[9/25/2026 8:21 PM] architype_
+thanks🥹 🥹
+
+
+[9/25/2026 8:23 PM] architype_
+my mistake was it only checked the next loop to see if it matched
+but if its corresponding next loop was unknown it would disregard it
+so i assumed they next loop would be checked with the 2nd next one to confirm it but it doesn't because it can be unknown and get disregarded
+
+
+[9/25/2026 8:25 PM] architype_
+i knew i was sleep deprived but this is another level
+imma go eep
+gn everyone😴
+
+{Reactions}
+💤
+
+[9/25/2026 8:26 PM] vrevangelist
+Come back better and rested tomorrow. Let the muscle memory and memory sink(sync) in
+
+{Reactions}
+🥰
+
+[9/25/2026 9:01 PM] architype_
+hey
+
+
+[9/25/2026 9:02 PM] architype_
+something crossed my mind when i was going to sleep
+
+{Reactions}
+🙏 🔥
+
+[9/25/2026 9:03 PM] architype_
+the reason we think 108 is 12 sets of 9 is because of the 3×3 square image each set of 9 makes right
+
+
+[9/25/2026 9:03 PM] architype_
+what if we are ordering our pieces wrong
+
+
+[9/25/2026 9:04 PM] architype_
+what happens if we first for the sets of 9s and then use those as bigger puzzle pieces?
+
+
+[9/25/2026 9:05 PM] architype_
+so instead of it being
+1    2  3  4   5   6  7   8   9
+10 11 12 13 14 15 16 17 18 
+......
+
+
+[9/25/2026 9:06 PM] architype_
+it was like
+1 2 3    10 11 12   19 20 21
+4 5 6   13 14 15  22 23 24
+7 8 9    16 17 18   25 26 27
+
+
+[9/25/2026 9:06 PM] vrevangelist
+Off topic but I imagine the long text is a hint to solving a puzzle image of all the sets of 9(3x3)
+
+
+[9/25/2026 9:08 PM] vrevangelist
+I think we’re kind of saying same thing maybe
+
+
+[9/25/2026 9:08 PM] architype_
+like imagine each sticker as a puzzle piece
+and we have to form 3×3 puzzle pieces then solve another 3×3 puzzle piece (and 3 extra that have .s)
+
+
+[9/25/2026 9:09 PM] architype_
+like see how in this they are sequential
+
+
+[9/25/2026 9:10 PM] architype_
+maybe instead we first make all our pieces form this secret message thing
+
+
+[9/25/2026 9:23 PM] architype_
+artist depiction
+
+{Attachments}
+assets\c91be4df-58ad-4a5b-b622-764f07a7a47f-f481278f2b5c9c99.jpg
+
+
+[9/25/2026 9:41 PM] architype_
+im still convinced this suspiciously 3×3 foldable poster has something to do with this
+
+{Attachments}
+assets\InsideCE_Lifestyle_00014-ed907b1812ee4025.jpg
+
+
+[9/25/2026 9:58 PM] vrevangelist
+Holy shit
+
+
+[9/25/2026 9:58 PM] vrevangelist
+Background to it maybe
+
+
+[9/26/2026 2:10 AM] xrayfella
+what would it take to brute force the sequence?
+
+
+[9/26/2026 2:16 AM] kappa_neuro
+https://discord.com/channels/460626942190813184/1552077397493424272/1553025571531919371
+
+{Reactions}
+👍
+
+[9/26/2026 5:16 PM] drasticsun
+Has the one shown in iam8bits unboxing video been listed?
+
+
+[9/26/2026 5:23 PM] raezores
+The sticker? Its -597, the one from iam8bit, only one above 500
+
+
+[9/27/2026 2:25 PM] lime8159
+Looking into a new approach for the stickers puzzle for the 12x9 arrangement. The top 9x9 square segment is the actual image, and each column in the bottom 3 yellow segments represents the number of times to cycle the column directly above.
+
+
+[9/27/2026 2:25 PM] lime8159
+Here's a tool, if anyone wants to try it out
+
+{Attachments}
+assets\Puzzle_Column_Shift_Tool-d287960dd2f917fc.html
+
+
+[9/27/2026 6:28 PM] _neo____2
+Have we considered it being morse code?
+
+
+[9/27/2026 6:29 PM] _neo____2
+- and • be the beeps and /being spaces
+
+
+[9/27/2026 6:29 PM] _neo____2
+Someone please correct me if that is too out of the box
+
+
+[9/27/2026 6:48 PM] santiface
+Pretty sure it's been considered
+
+
+[9/27/2026 7:12 PM] drasticsun
+Morse code feels like the obvious answer since it's all dots, dashes, and slashes
+
+
+[9/27/2026 7:23 PM] _neo____2
+If we could get most of a 10 symbols string we could tell it
+
+
+[9/27/2026 7:40 PM] pex.x
+My thought with the stickers is that if we can find the slashes, we would be able to determine if it is morse code.
+
+For example, the first sticker 001. Assuming it follows the English Morse Alphabet, and since we have 002 as a / (which could be a space, or delimeter), that means it could be a dot (E)  or a - (T). T would make the most sense, imo.
+
+If we could find the /, then we can figure out the spaces in between. Only reason I have a feeling it is something other than morse is the sequential set at 037, 038, and 039 (-//). Unusual for morse to have two spaces, but my bet is that it is the start of a new word
+
+
+[9/27/2026 7:44 PM] _neo____2
+Maybe the two slashes means it's another word?
+
+
+[9/27/2026 7:44 PM] pex.x
+Exactly
+
+
+[9/27/2026 7:44 PM] pex.x
+I hope it is only 41 characters lol, 597 would be nuts
+
+
+[9/27/2026 7:45 PM] pex.x
+597 to brute force would be nuts, like 10 trillion years of computational power or some shit
+
+
+[9/27/2026 7:45 PM] _neo____2
+Depends on the sequence of letters
+
+
+[9/27/2026 7:45 PM] _neo____2
+The message in general
+
+
+[9/27/2026 7:45 PM] _neo____2
+Pretty sure an "A" in morse code is just three symbols
+
+
+[9/27/2026 7:45 PM] _neo____2
+- - • in this case
+
+
+[9/27/2026 7:45 PM] _neo____2
+Two dots and a dash*
+
+
+[9/27/2026 9:49 PM] narbam
+It's been posted before, but here is the morse convert key from the PrintingPaperEasterEgg:
+```
+{ 'a', ".-" },
+{ 'b', "-..." },
+{ 'c', "-.-." },
+{ 'd', "-.." },
+{ 'e', "." },
+{ 'f', "..-." },
+{ 'g', "--." },
+{ 'h', "...." },
+{ 'i', ".." },
+{ 'j', ".---" },
+{ 'k', "-.-" },
+{ 'l', ".-.." },
+{ 'm', "--" },
+{ 'n', "-." },
+{ 'o', "---" },
+{ 'p', ".--." },
+{ 'q', "--.-" },
+{ 'r', ".-." },
+{ 's', "..." },
+{ 't', "-" },
+{ 'u', "..-" },
+{ 'v', "...-" },
+{ 'w', ".--" },
+{ 'x', "-..-" },
+{ 'y', "-.--" },
+{ 'z', "--.." },
+{ '1', ".----" },
+{ '2', "..---" },
+{ '3', "...--" },
+{ '4', "....-" },
+{ '5', "....." },
+{ '6', "-...." },
+{ '7', "--..." },
+{ '8', "---.." },
+{ '9', "----." },
+{ '0', "-----" },
+{ '.', ".-.-.-" },
+{ ',', "--..--" },
+{ '?', "..--.." },
+{ '/', "-..-." },
+{ '@', ".--.-." },
+{ ' ', "/" }
+```
+
+
+[9/27/2026 9:55 PM] vrevangelist
+Piano?
+Rotated?
+
+
+[9/27/2026 9:56 PM] vrevangelist
+Okay the song and say in danish… half joking lol
+
+
+[9/28/2026 2:22 AM] gamiddop107
+**CE sticker symbols repeat every 108 stickers — here's where two independent analyses stopped, and what only you can supply**
+
+Using the 82 stickers in stickers.md: symbols repeat with period 108, i.e. sticker N has the same mark as N+108, N+216, etc. Every position with two or more known stickers agrees (19 of 19 checks), 100,000 random shuffles never produce this, and all seven known dots fall in positions 85–98 even though their sticker numbers run 92–413 (roughly 1 in 150,000 by chance). Two separate analyses reproduced each other's numbers.
+
+The cycle so far (? = unknown), 3 rows of 36:
+```
+?/--/?/?/-?-/-/?/--/-?--?-??//-/???/
+-///?//-?///??-?-??/-?//??/?//??/---
+?--/?////???./??..?.??./..??/??????/
+```
+
+What we could NOT get anywhere with: no readable message yet (Braille, binary vs LIFEDETECTED, overlay on the Cummings poem, and matching against every known printer string all come up empty or contradicted). No original copy of the dat/534brn9653f9j8mmd JPEG page exists in Wayback or archive.today — the surviving copy was saved as text and the bytes are gone. And 108-per-sheet is a standard label format, so this could be a print-sheet artifact rather than a puzzle. Those are honest limits, not a solve.
+
+**Five things that would move this and that we can't do from a desk:**
+1. The labeled 3×3 jigsaw of the background images (the old imgur link 846shEE is dead to us). Just the nine letters A–I in reading order is enough — that unlocks the one layout nobody has tested.
+2. Stickers 197, 198, 200, 203, 205 are predicted to be DOTS. One clear photo of any of them either confirms or kills the model. #200 is the best test.
+3. Unknown slots inside the dot region: 87, 88, 91, 93, 94 (or those +108, +216…).
+4. Any CE owner: a photo of a sticker next to a ruler, and what the backing sheet looked like. That settles whether 108 is just the sheet size.
+5. Did anyone save the terminal41 JPEG page in April 2020 as a raw file (not a browser "save as text")?
+
+
+[9/28/2026 2:22 AM] gamiddop107
+And: has the 108 cycle been spotted here before? If so, sorry for the noise — point me at it. Full checklist of all 43 open positions and the scripts available on request.
+
+
+[9/28/2026 2:23 AM] gamiddop107
+
+
+{Attachments}
+assets\INSIDE-ARG-Verification-Handoff_1-ab1725b8990dfcb9.pdf
+
+
+[9/28/2026 2:24 AM] santiface
+Yep, 108 has been the working theory for quite some time
+
+
+[9/28/2026 2:25 AM] _neo____2
+So, why don't fill the 108 spaces with the equivalent symbols and see what it says?
+
+
+[9/28/2026 2:26 AM] _neo____2
+If it is a repeating pattern in a 108 "grid", then guessing the unkown ones wouldn't too hard
+
+
+[9/28/2026 2:28 AM] _neo____2
+Assuming it repeats of course
+
+
+[9/28/2026 2:28 AM] gamiddop107
+Sorry for being a noob but where can I find the latest of what was documented with 108 spaces and stickers?
+
+
+[9/28/2026 2:29 AM] _neo____2
+Well, there's the github with all the sticker
+
+
+[9/28/2026 2:30 AM] _neo____2
+My idea is to, think of it as a repeating pattern, count it to 108 diving it, and crossing every single symbol to its place
+
+
+[9/28/2026 2:30 AM] _neo____2
+Like 1 is the same as 109
+
+
+[9/28/2026 2:30 AM] _neo____2
+And so on
+
+
+[9/28/2026 2:31 AM] gamiddop107
+Thanks is that twinysam/INSIDE-ARG? I've been through it and don't see the 108 cycle written up there. Is there a different repo or a doc where the analysis lives? Mainly trying to find out what's already been tried on it (layouts, Braille, the jigsaw order) so I don't repeat work.
+
+
+[9/28/2026 2:31 AM] santiface
+The attempts haven't been exactly documented, but you can find a good starting point in the pinned message here.
+
+
+[9/28/2026 2:32 AM] _neo____2
+Think it's a good time to doc each approach
+
+
+[9/28/2026 2:34 AM] _neo____2
+Is that too outland-ish?
+
+
+[9/28/2026 2:34 AM] santiface
+You are welcome to try, it would be a behemoth of an undertaking, I already kinda have my hands full with documenting what was already solved. But if you are up for it, it'd be awesome. Swing by #documentation and we'll figure out where we can start putting that together
+
+
+[9/28/2026 2:35 AM] gamiddop107
+Going to be 100% with you guys. I was discussing a game with my brother and he mentioned this game and how there was an unsolved arg that's 10 years old. I work with AI and put it to work on it. It literally thought it was on a new discovery because it wasn't documented on GitHub. It was running into walls though because a lot of the pictures it needs to verify are just broken links at this point. It recommended I post on discord to continue the research.
+
+
+[9/28/2026 2:37 AM] santiface
+Yeah, I figured that was AI.
+
+
+[9/28/2026 2:37 AM] jajasteele
+wait so i'm a bit confused, the stickers have a number, a symbol, but also a part of the image?
+
+
+[9/28/2026 2:37 AM] santiface
+yes, 9 different images distributed among them
+
+
+[9/28/2026 2:37 AM] jajasteele
+interesting
+
+
+[9/28/2026 2:37 AM] gamiddop107
+I am interested in its ability to possibly move this forward.
+
+
+[9/28/2026 2:38 AM] santiface
+To try to do anything meaningful with AI, the agent would have to have access to pretty much this entire discord. So you'd need a big data dump of the entire server
+
+
+[9/28/2026 2:39 AM] gamiddop107
+The level of token access I have is immense
+
+
+[9/28/2026 2:40 AM] _neo____2
+How's that exactly?
+
+
+[9/28/2026 2:40 AM] santiface
+https://github.com/twinysam/INSIDE-ARG#9-piece-puzzle
+
+
+[9/28/2026 2:41 AM] santiface
+Something I could use help with, is with updating the Discord image links being used in the Github.
+
+
+[9/28/2026 2:42 AM] santiface
+we can store the images in the repo
+
+{Reactions}
+❤️
+
+[9/28/2026 2:45 AM] _neo____2
+weird how there's random letters and numbers around
+
+
+[9/28/2026 2:45 AM] _neo____2
+Biggest string I could read is 53f9
+
+
+[9/28/2026 2:46 AM] santiface
+We cracked our heads on it for months
+
+
+[9/28/2026 2:47 AM] _neo____2
+Kinda forms an url
+
+
+[9/28/2026 2:47 AM] santiface
+Yep, it does. That's all right there in the github, it's the best documented puzzle we have.
+
+
+[9/28/2026 2:48 AM] gamiddop107
+Thanks for talking this through. Quick background: I've been running the sticker data from your repo through a couple of independent analyses (period scan, dot-cluster stats, Braille and binary tests, comparison against all the printer strings), and 108 came out on my end too. I'd like to write it up properly for the repo, since it sounds like the work so far only exists in this channel — with credit to whoever found it first.
+
+A few things that would let me finish and not repeat old work:
+
+1. The jigsaw order: in the assembled 9-piece image (846shEE), which letter is in each slot, top-left to bottom-right? Just the nine letters in reading order is enough.
+
+2. Has anyone tried laying the symbols out using that jigsaw order — each image's 12 symbols as a block, blocks arranged like the picture? That's the one layout I haven't seen mentioned.
+
+3. What's been tried on the symbol cycle overall? Even a rough list ("Braille, nothing; Morse, nothing") saves me repeating it.
+
+4. stickers.md says "we know which symbol belongs to each sticker number" — was that meant as the image (A–I) cycle, or was the 108 symbol repeat known back then too?
+
+5. Has anyone measured a sticker or described the backing sheet it came on? 108 is a standard labels-per-sheet count, and that would settle whether the repeat is a print artifact.
+
+6. Would a written-up "sticker symbol cycle" section for the repo be welcome? I'd include a checklist of exact sticker numbers that either fill gaps or test the theory (e.g. 197, 198, 200, 203, 205 should all be dots if it holds).
+
+
+[9/28/2026 2:48 AM] _neo____2
+That's way to much effort in one ARG, I wonder Playdead's has a backup if we never solve it
+
+
+[9/28/2026 2:51 AM] meowerthetruesigma
+you should redo all of them if you can,maybe you end up using additional bits of information that have us stuck right now,or make sense of something new from what is already known
+
+
+[9/28/2026 2:52 AM] santiface
+Like I said though, you should get some Discord scrapper and export all text only at least from the server. It's going to be far more efficient that way
+
+
+[9/28/2026 2:52 AM] kappa_neuro
+I checked it point by point against my own data
+
+1. Conventions
+Same as mine: 1-based positions, 108 is the last one, background letter = (n - 1) mod 9
+My registry also has 82 observations in 65 positions.
+
+2. The 108 cycle
+Reproduced exactly: 0 differences across all 108 positions (36 slash, 22 dash, 7 dot, 43 unknown)
+All 17 repeats agree. My shuffle test gives about 1e-5, which matches your 0 / 100,000.
+
+3. Dot clustering
+Reproduced. I also ran a stricter null, drawing only from the 65 known positions: about 1 in 100,000
+There is a second half to this pattern:
+- no dash after position 75 (16 known positions from 76 to 108, 0 dashes, p about 4e-4)
+- no dot before position 85
+So 82 to 108 looks like a separate zone that only has slashes and dots, not just a lone cluster.
+
+4. Distribution by image
+Counts match mine
+
+5 to 7. Printer strings, LIFEDETECTED binary, Braille
+Agree with all three negatives. The chances were low from the start, but it is good to have them as clean results.
+
+8. Jigsaw
+The labeled image loads fine for me (imgur 846shEE). The order is:
+I A B
+C D E
+F G H
+It is not alphabetical, so you were right not to guess.
+Rule: slot (row-major, 0 = top-left) = sticker number mod 9. The top-left piece I is stickers 9, 18, 27 and so on.
+I assembled all six of your block variants in this order (image attached). No picture shows up
+With 43 unknowns that is weak evidence, but there is nothing to follow yet
+One caution: nothing supports the idea that the 12 stickers of a piece form a 3 x 4 block inside that piece yet I treat it as an exploratory layout only
+
+9. Manufacturing
+I think this is the most important point in the document. A 9 x 12 sheet with serial numbers printed in sequence gives period 108 and "background = column" by itself, with no puzzle needed. It does not rule a puzzle out, but the cycle alone proves nothing more
+The slash and dot zone would then be the bottom three rows of the sheet
+A ruler photo of one sticker would settle a lot.
+
+
+[9/28/2026 2:54 AM] santiface
+This is the image 846shEE
+
+{Attachments}
+assets\846shEE-ce4f28eefdc2a6e7.png
+
+
+[9/28/2026 2:56 AM] gamiddop107
+Agreed on exporting the channel. It has to be you (or another admin) rather than me: the clean way is with a bot, and only someone who can add a bot to the server can set that up. The tool also works with a personal login token, but Discord's terms forbid automated use of user accounts, so the bot route is the safe one.
+
+The tool is DiscordChatExporter, free and open source: https://github.com/Tyrrrz/DiscordChatExporter
+
+Steps (desktop, about 15 minutes):
+
+1. Go to https://discord.com/developers/applications → New Application → Bot tab. Turn on "Message Content Intent." Copy the bot token.
+
+2. OAuth2 → URL Generator. Tick "bot", give it View Channels and Read Message History. Open the generated link and add the bot to the server.
+
+3. Download DiscordChatExporter (the GUI version is easiest). Paste the bot token, select this channel, set format to JSON. Tick "download media" — Discord's image links expire now, so this saves every sticker photo ever posted here as an actual file.
+
+4. Export. Six years of this channel is probably tens of thousands of messages; JSON handles that fine.
+
+Once it's done, share the JSON (plus the media folder if you grabbed it) however is easiest — a Drive or OneDrive link is fine. I'll index it and pull out everything on the sticker symbols: what was tried, when, by whom, and anything that never made it into the repo. That becomes the source for the write-up.
+
+
+[9/28/2026 2:58 AM] meowerthetruesigma
+is he a bot? im confused ,what is with this reply format
+
+
+[9/28/2026 2:59 AM] omurice74u
+just using ai
+
+
+[9/28/2026 3:01 AM] santiface
+yeah, let's ease a bit on the copy pasting of chatbots
+
+
+[9/28/2026 3:01 AM] santiface
+I'll try the ChatExporter, was already on my to-do list
+
+
+[9/28/2026 3:02 AM] gamiddop107
+kappa — thanks, that's a proper reproduction and I've checked your two additions on my side: last dash at 75, first dot at 85, 0 dashes in the 16 known positions from 76–108 (I get p ≈ 0.0004 with the same shuffle). Agreed the tail is a zone, not a cluster.
+
+I also agree with you on manufacturing being the most important point. A 9×12 sheet with serials printed in sequence gives period 108 and background = column for free. Your 9×12 framing does raise one thing worth putting on the table though:
+
+The slash/dot zone is rows 10–12 of that sheet — exactly three rows tall, two symbols only. Braille cells are 2 wide × 3 tall. So the bottom of the sheet can be read as one line of Braille with dot = raised and slash = flat, which is the same mechanism as the Xbox solve. Grid as it stands (stickers 82–108, ? = unknown):
+```
+???./??..
+?.??./..?
+?/??????/
+```
+With 16 unknowns it isn't readable, but each cell is already constrained. Taking cells from column 2 (col 1 as margin): cols 8–9 can only be F, G, P or Q; cols 4–5 only E, H, O, R or Z. Taking cells from column 1: cols 5–6 only I or S. Four letters is short for a Playdead password, so it may be nothing, but it's specific enough that a handful of stickers settle it: 82, 83, 84, 87, 88, 91, 93, 94, 99, 100, 102–107 (or any +108 multiple). 87, 88, 91, 93, 94 are the priority either way.
+
+On the jigsaw: agreed, nothing shows, and I'd retire the 3×4-block-per-piece idea — the symbols are organized by row (pass), not by image, so the sheet view is the right one.
+
+Would you be up for co-writing a repo section? Cycle, the two zone facts, the negatives, the sheet layout, the Braille hypothesis flagged as untested, and the checklist. Credit to whoever first spotted 108 in the channel.
+
+
+[9/28/2026 3:03 AM] santiface
+@gamiddop107  please stop copy pasting LLMs this much
+
+
+[9/28/2026 3:03 AM] omurice74u
+https://github.com/petergyang/no-ai-slop
+at the very least use this so it's less annoying to read
+
+
+[9/28/2026 3:04 AM] omurice74u
+otherwise it's pretty obnoxious
+
+
+[9/28/2026 3:04 AM] gamiddop107
+Np
+
+
+[9/28/2026 3:18 AM] _neo____2
+Analysing the sticker it seem to line up with this hipothesis
+
+
+[9/28/2026 3:18 AM] _neo____2
+Stickers*
+
+
+[9/28/2026 3:18 AM] pex.x
+It could be, but I think it leans more towards the traditional images.
+
+
+[9/28/2026 3:19 AM] pex.x
+Like the acorn
+
+
+[9/28/2026 3:19 AM] _neo____2
+Every sticker we have that has a follow up one consists and either a - or • followed by a slash
+
+
+[9/28/2026 3:20 AM] _neo____2
+And ones that are separeted by a missing sticker are almost exclusively two /
+
+
+[9/28/2026 3:20 AM] _neo____2
+We have the 38 and 39 case
+
+
+[9/28/2026 3:21 AM] _neo____2
+Much like 123 and 125 for example
+
+
+[9/28/2026 3:21 AM] _neo____2
+95 and 97 are two dots
+
+
+[9/28/2026 3:22 AM] _neo____2
+242 to 248 don't fit this logic tho
+
+
+[9/28/2026 3:22 AM] _neo____2
+Let me check again
+
+
+[9/28/2026 3:24 AM] _neo____2
+Using this logic
+
+242 -
+243 /*
+244 - or •
+245 /
+246 /*
+247 -
+248 /
+
+/* Means it is a guess based on this logic
+
+
+[9/28/2026 3:24 AM] _neo____2
+It does actually
+
+
+[9/28/2026 3:24 AM] _neo____2
+If two // means the beggining of a new word
+
+
+[9/28/2026 3:26 AM] _neo____2
+We can't really apply this logic tho because we don't know how many words it is consisted of, considering this hipothesis as a morse code, with double dashes separating each word
+
+
+[9/28/2026 3:26 AM] _neo____2
+We can make possibilites
+
+
+[9/28/2026 3:27 AM] _neo____2
+I will try to make a graph for better visualization
+
+
+[9/28/2026 3:39 AM] _neo____2
+Considering 38/39 confirms the end of a word, maybe we could guess how many letter combinations fit inside the 38 spaces using /•/ format
+
+
+[9/28/2026 3:46 AM] bananabandit0
+If the code is 108 symbols then 78,79,80,81 is ////
+
+Any ideas what that could signify if it was morse?
+
+
+[9/28/2026 3:46 AM] _neo____2
+I am not considering it as 108 symbols
+
+
+[9/28/2026 3:47 AM] bananabandit0
+Yeah, but I don't think we're ever getting close to 600
+
+
+[9/28/2026 3:47 AM] _neo____2
+Me neither
+
+
+[9/28/2026 3:47 AM] _neo____2
+But would make if this whole thing is giving us a message in morse
+
+
+[9/28/2026 3:48 AM] _neo____2
+38 spaces in that format would give us like 3-4 letters perharps
+
+
+[9/28/2026 3:49 AM] _neo____2
+597 spaces (as I am calling them) seems plausible for a few words
+
+
+[9/28/2026 3:50 AM] _neo____2
+I am thinking what I can do with this logic to develop something around it
+
+
+[9/28/2026 3:51 AM] _neo____2
+This is the best I can do, forming at least a syllable
+
+
+[9/28/2026 3:52 AM] _neo____2
+(sorry for spelling mistakes, it's been quite some time since I last spoke this much online)
+
+
+[9/28/2026 3:52 AM] _neo____2
+@bananabandit0 any ideas?
+
+
+[9/28/2026 3:53 AM] bananabandit0
+Not good ones
+
+
+[9/28/2026 4:13 AM] santiface
+Alright, knock yourself out: https://github.com/twinysam/playdead-unofficial-exports
+
+{Reactions}
+❤️ (2)
+
+[9/28/2026 4:19 AM] _neo____2
+I found two anomalies in it
+
+
+[9/28/2026 4:19 AM] _neo____2
+Will finish writting it down and state them here
+
+
+[9/28/2026 4:30 AM] _neo____2
+More than halfway through it
+
+
+[9/28/2026 4:30 AM] _neo____2
+Using this logic it's possible to create a 7 symbol string
+
+
+[9/28/2026 4:31 AM] _neo____2
+By considering the symbols before and after a "- or •" to be a /
+
+
+[9/28/2026 4:31 AM] _neo____2
+Works really well with the exceptions of the anomalies
+
+
+[9/28/2026 4:41 AM] _neo____2
+So
+
+
+[9/28/2026 4:42 AM] _neo____2
+Putting it or a grid, or doc, that goes up to 597 works
+
+
+[9/28/2026 4:44 AM] _neo____2
+If you consider a "/" to be a space between a symbol and another, we can add at least two "/" when having individual "-" or "•", and they work forming strings with near symbols
+
+
+[9/28/2026 4:44 AM] _neo____2
+Raising the numbers of symbols drastically and making bigger strings
+
+
+[9/28/2026 4:44 AM] _neo____2
+HOWEVER
+
+
+[9/28/2026 4:45 AM] _neo____2
+I found two anomalies with this logic when looking up the stickers we have
+
+
+[9/28/2026 4:47 AM] _neo____2
+178/179 and 182/183 are both a sequence of two dashes
+
+
+[9/28/2026 4:48 AM] _neo____2
+183/184 alone fits this "/•/" format
+
+
+[9/28/2026 4:48 AM] _neo____2
+As it is a "-/" sequence
+
+
+[9/28/2026 4:49 AM] _neo____2
+But I cant find an explanation for the two pairs in particular
+
+
+[9/28/2026 4:49 AM] _neo____2
+They only happened this time (or two times) and are really close to one another
+
+
+[9/28/2026 4:56 AM] _neo____2
+The only time a similar thing happens is 38/39, 65/66, but they are both "//" sequences (that by this logic is a space between two individual letters)
+
+
+[9/28/2026 4:58 AM] _neo____2
+And in 477/488, being also a "//" sequence. As 476 is a "-", so the 477* symbol would be a "/" in this logic
+
+
+[9/28/2026 4:59 AM] _neo____2
+Besides that, works really well as I said
+
+
+[9/28/2026 4:59 AM] _neo____2
+Formed strings
+
+
+[9/28/2026 5:00 AM] _neo____2
+I still have to give the 38 space hypothesis a go, and se what it produces, if nothing that fills the 38 spaces perfecly is found, the morse code hypothesis can be fully ruled out.
+
+Edit: If the 38 space can be filled with enough letters that form some syllables (My top contenders are "LAND" and "EMERG", because because of the low symbol count and context), then an explanation to the anomalies would have to made, or even continue with them, I think maybe they could be numbers.
+
+
+[9/28/2026 6:07 AM] bananabandit0
+What if the code is in fractionated morse?
+
+
+[9/28/2026 6:14 AM] _neo____2
+Could explain it to me
+
+
+[9/28/2026 6:14 AM] _neo____2
+I was talking to my father a possibility of it being another form of morse
+
+
+[9/28/2026 7:10 AM] bananabandit0
+Here a website that explains it and a few more ciphers https://www.cryptogram.org/resource-area/cipher-types/
+
+{Embed}
+clincolnp
+https://www.cryptogram.org/resource-area/cipher-types/
+Cipher Types
+
+
+[9/28/2026 7:11 AM] _neo____2
+Seems to be it
+
+
+[9/28/2026 7:11 AM] _neo____2
+I was watching a lecture on it
+
+
+[9/28/2026 7:12 AM] _neo____2
+BUT
+
+
+[9/28/2026 7:13 AM] _neo____2
+Fractionated morse uses an X (in our case a /) to separate letters and two X's for words
+
+
+[9/28/2026 7:14 AM] _neo____2
+There's sequences that use only /-/ tho
+
+
+[9/28/2026 7:14 AM] _neo____2
+Let me check
+
+
+[9/28/2026 7:14 AM] _neo____2
+Pretty sure an "-" alone means it's an E
+
+
+[9/28/2026 7:15 AM] _neo____2
+A lone dot means it's an E
+
+
+[9/28/2026 7:15 AM] _neo____2
+Let me check if we have lone dots
+
+
+[9/28/2026 7:18 AM] _neo____2
+That's an outland-ish guess
+
+
+[9/28/2026 7:18 AM] _neo____2
+But
+
+
+[9/28/2026 7:18 AM] _neo____2
+If this is fractionated morse
+
+
+[9/28/2026 7:18 AM] _neo____2
+Given that S02 is a /
+
+
+[9/28/2026 7:18 AM] _neo____2
+Meaning it's a different letter for S01
+
+
+[9/28/2026 7:19 AM] _neo____2
+Then S01 is an E
+
+
+[9/28/2026 7:19 AM] _neo____2
+S01 IS AN E!!!!
+
+
+[9/28/2026 7:20 AM] _neo____2
+@Twinysam progress!?
+
+
+[9/28/2026 7:21 AM] _neo____2
+It's fractionated morse!
+
+
+[9/28/2026 7:21 AM] _neo____2
+That's why we had two sequences of "-"
+
+
+[9/28/2026 7:21 AM] jajasteele
+But why the whole image thing then?
+
+
+[9/28/2026 7:23 AM] _neo____2
+Maybe they did it because they could? A meta ARG is not a new concept
+
+
+[9/28/2026 7:23 AM] _neo____2
+@bananabandit0 you're a genius!
+
+
+[9/28/2026 7:23 AM] bananabandit0
+I'm gonna be honest
+
+
+[9/28/2026 7:24 AM] bananabandit0
+I'm still not even sure what fractionated morse is
+
+
+[9/28/2026 7:24 AM] _neo____2
+Morse code
+
+
+[9/28/2026 7:24 AM] _neo____2
+But
+
+
+[9/28/2026 7:25 AM] _neo____2
+It uses three symbols
+
+
+[9/28/2026 7:25 AM] _neo____2
+Regular - and •
+
+
+[9/28/2026 7:25 AM] _neo____2
+And a third one, normally an X to separate individual letters
+
+
+[9/28/2026 7:25 AM] bananabandit0
+I got that
+
+
+[9/28/2026 7:25 AM] _neo____2
+And two X's to separate individual words
+
+
+[9/28/2026 7:26 AM] _neo____2
+That's why we have two //
+
+
+[9/28/2026 7:26 AM] _neo____2
+And a / at the S02
+
+
+[9/28/2026 7:26 AM] _neo____2
+Because a lone • translates to an E
+
+
+[9/28/2026 7:27 AM] _neo____2
+It's basically regular morse, just fancy
+
+
+[9/28/2026 7:27 AM] _neo____2
+I will try to guess the first word real quick
+
+
+[9/28/2026 7:28 AM] _neo____2
+Could be Emergency?
+
+
+[9/28/2026 7:35 AM] _neo____2
+Emergency fits
+
+
+[9/28/2026 7:35 AM] _neo____2
+But stops at the 29 sticker
+
+
+[9/28/2026 7:36 AM] _neo____2
+It respects the ones we have
+
+
+[9/28/2026 7:36 AM] _neo____2
+Both "-" and "/"
+
+
+[9/28/2026 7:36 AM] _neo____2
+S31 could only be another E
+
+
+[9/28/2026 7:36 AM] _neo____2
+Since S32 is a "/", and S32 is a actual sticker we have
+
+
+[9/28/2026 7:41 AM] _neo____2
+It's is not "emergency"
+
+
+[9/28/2026 7:42 AM] _neo____2
+It would make S30 and S31 the word break, both being a "/", but S32 is an "/" alredy
+
+
+[9/28/2026 7:43 AM] _neo____2
+Does anyone have any guesses?
+
+
+[9/28/2026 7:43 AM] _neo____2
+First letter is an E
+
+
+[9/28/2026 8:19 AM] _neo____2
+And the sequence, "every time that test" fit it aswell
+
+
+[9/28/2026 8:25 AM] jajasteele
+couldn't it also be smaller words?
+
+
+[9/28/2026 8:27 AM] _neo____2
+"Every time that test" is four words
+
+
+[9/28/2026 8:28 AM] jajasteele
+i think we'll need more stickers to get decent results lol, there's a billion possibilities
+
+
+[9/28/2026 8:28 AM] _neo____2
+Perharps
+
+
+[9/28/2026 8:28 AM] _neo____2
+Does not work
+
+
+[9/28/2026 8:28 AM] _neo____2
+Missed a dot
+
+
+[9/28/2026 8:31 AM] _neo____2
+I will try experiment
+
+
+[9/28/2026 8:34 AM] _neo____2
+But only a few that fills this first 38 spaces
+
+
+[9/28/2026 8:34 AM] _neo____2
+I am not considering numbers
+
+
+[9/28/2026 8:34 AM] _neo____2
+Damn, it's actually a great chunck of possibilities
+
+
+[9/28/2026 8:35 AM] jajasteele
+there's only 3 parts separated by // right? or am i missing some?
+
+
+[9/28/2026 8:39 AM] _neo____2
+2
+
+
+[9/28/2026 8:39 AM] _neo____2
+One at 38/39
+
+
+[9/28/2026 8:40 AM] _neo____2
+And another around 66 or smt
+
+
+[9/28/2026 8:40 AM] _neo____2
+Let me check
+
+
+[9/28/2026 8:40 AM] _neo____2
+65/66
+
+
+[9/28/2026 8:41 AM] _neo____2
+I will check it all just in case, but I am pretty confident these are only word breaks the ones we have
+
+
+[9/28/2026 8:42 AM] jajasteele
+` /-                /-          /    -//       /     -     /   / //     -                   •  • •                    -    / /-     -                     / /       /      /      --  --/  /     •/           •              / /       /          -  / -/   /     /    /   -              /             /         •     /    /      /   -    /- - -/   -   -      /       / / /        -        /        /        /  /       •                      -       -/   /-                  -/    /- /                                                                                                                      -  `
+
+This is what i'm trying to work with rn
+
+
+[9/28/2026 8:42 AM] jajasteele
+lol that display is awful but oh well
+
+
+[9/28/2026 8:43 AM] m6lg6
+just seeing what it looks like
+
+
+[9/28/2026 8:43 AM] gamiddop107
+For fractionated morse straight-through reading is ruled out for all three separator choices; only column-wise reading with dash as separator survives the run rules and any new sticker that produces three dashes in a column kills it.
+
+
+[9/28/2026 8:43 AM] m6lg6
+does it look like a face to u guys?
+
+
+[9/28/2026 8:43 AM] jajasteele
+what
+
+
+[9/28/2026 8:44 AM] _neo____2
+Good news
+
+
+[9/28/2026 8:45 AM] _neo____2
+We can find "e" pretty easily
+
+
+[9/28/2026 8:45 AM] _neo____2
+Check for sticker that are trapped between other ones
+
+
+[9/28/2026 8:45 AM] _neo____2
+Lol it does
+
+
+[9/28/2026 8:46 AM] m6lg6
+called it
+
+
+[9/28/2026 8:46 AM] _neo____2
+Like, if 100 is an "/" and 102 is also an "/"
+
+
+[9/28/2026 8:46 AM] _neo____2
+Then it can only be a •
+
+
+[9/28/2026 8:46 AM] _neo____2
+That is the E equivalent in morse
+
+
+[9/28/2026 8:47 AM] _neo____2
+Wouldn't be so sure
+
+
+[9/28/2026 8:48 AM] _neo____2
+Looks good
+
+
+[9/28/2026 8:48 AM] jajasteele
+i've been trying to bruteforce it lol
+
+
+[9/28/2026 8:48 AM] jajasteele
+but there's millions of combinations so
+
+
+[9/28/2026 8:48 AM] _neo____2
+Try to get the "e"s
+
+
+[9/28/2026 8:48 AM] jajasteele
+for the first one i believe `END AMSTERDAM` works for example lmao, if my script is not borken
+
+
+[9/28/2026 8:49 AM] _neo____2
+AI didn't really worked for me
+
+
+[9/28/2026 8:49 AM] _neo____2
+It didn't followed the 38 space rule so well
+
+
+[9/28/2026 8:49 AM] jajasteele
+i think i'll try to compile every possible things, then make AI analyze the output and try to find coherent sentences
+
+
+[9/28/2026 8:50 AM] m6lg6
+AI can't pass a captcha test
+
+
+[9/28/2026 8:50 AM] jajasteele
+though i'm mostly scared of the last part, there's a ton of space without word breakers so the possibilities are dumb
+
+
+[9/28/2026 8:50 AM] _neo____2
+Got new letter using the FMC logic
+
+
+[9/28/2026 8:50 AM] jajasteele
+the wha
+
+
+[9/28/2026 8:50 AM] _neo____2
+475 is an /
+
+
+[9/28/2026 8:51 AM] _neo____2
+476 is a -
+
+
+[9/28/2026 8:51 AM] _neo____2
+478 is another/
+
+
+[9/28/2026 8:51 AM] _neo____2
+Meaning it's a full letter
+
+
+[9/28/2026 8:51 AM] _neo____2
+The only letter in morse that fits is a N or M
+
+
+[9/28/2026 8:52 AM] _neo____2
+That is a - followed by a •, or a -
+
+
+[9/28/2026 8:52 AM] jajasteele
+welp the third part is already at 3.5 million possibilities and still rising, this is gonna take years
+
+
+[9/28/2026 8:53 AM] _neo____2
+
+
+{Attachments}
+assets\Screenshot_2026-09-28-08-52-24-829_com.and-4b62c237e78f1366.jpg
+
+
+[9/28/2026 8:53 AM] jajasteele
+maybe i should've ran it on a fast language instead of like, Lua
+
+
+[9/28/2026 8:53 AM] _neo____2
+Compare to morse and you get an N or M
+
+
+[9/28/2026 8:54 AM] _neo____2
+If the get the • like I said maybe it cuts the possibilites by a significant amount?
+
+
+[9/28/2026 8:54 AM] _neo____2
+There's a few strings of/(?)/
+
+
+[9/28/2026 8:54 AM] _neo____2
+That could only be filled with a •
+
+
+[9/28/2026 8:55 AM] _neo____2
+That in FMC
+
+
+[9/28/2026 8:56 AM] jajasteele
+well the iteration part of the script is mostly made by AI because i suck at this sort of stuff, but it shouldn't be trying - and . in every single positions, it tries actual full letters if they fit in the blank spaces
+
+
+[9/28/2026 8:57 AM] jajasteele
+the more annoying part is i can't really have a progress bar, so it's really just waiting for an indefinite amount of time
+
+
+[9/28/2026 8:57 AM] _neo____2
+Just noticed
+
+
+[9/28/2026 8:58 AM] _neo____2
+33 to 37 is a full letter
+
+
+[9/28/2026 8:58 AM] _neo____2
+37 is a "-"
+
+
+[9/28/2026 8:58 AM] _neo____2
+32 and 38 are "/"
+
+
+[9/28/2026 9:00 AM] _neo____2
+Only a 0 fits there
+
+
+[9/28/2026 9:01 AM] _neo____2
+God that is at the very least, agonizing
+
+
+[9/28/2026 9:01 AM] jajasteele
+yup
+
+
+[9/28/2026 9:02 AM] _neo____2
+If not 0 there is letter break there
+
+
+[9/28/2026 9:04 AM] jajasteele
+the second part is the one with the least possibilities, only 12k
+
+
+[9/28/2026 9:05 AM] _neo____2
+Try with S01 being a T
+
+
+[9/28/2026 9:05 AM] _neo____2
+Instead of a E
+
+
+[9/28/2026 9:06 AM] jajasteele
+yeah it's trying both
+
+
+[9/28/2026 9:06 AM] jajasteele
+though something that both saves time AND could potentially miss stuff
+
+
+[9/28/2026 9:06 AM] jajasteele
+i tried to make it check for existing english words
+
+
+[9/28/2026 9:06 AM] jajasteele
+instead of just random letters
+
+
+[9/28/2026 9:06 AM] _neo____2
+What if it's in Danish?
+
+
+[9/28/2026 9:06 AM] jajasteele
+yeah lol that'd be the issue
+
+
+[9/28/2026 9:08 AM] _neo____2
+Would make sense in a way
+
+
+[9/28/2026 9:08 AM] _neo____2
+It's a possibility at the very least
+
+
+[9/28/2026 9:08 AM] jajasteele
+yeah can always change the word list if needed lol
+
+
+[9/28/2026 9:10 AM] _neo____2
+Dude
+
+
+[9/28/2026 9:10 AM] _neo____2
+Look what Gemini gave me
+
+
+[9/28/2026 9:10 AM] _neo____2
+It made me chill
+
+
+[9/28/2026 9:10 AM] _neo____2
+
+
+{Attachments}
+assets\Screenshot_2026-09-28-09-10-18-937_com.goo-8aeae1cc1633a954.jpg
+
+
+[9/28/2026 9:11 AM] _neo____2
+I feel shivers down my spine reading it
+
+
+[9/28/2026 9:11 AM] m6lg6
+WHAT
+
+
+[9/28/2026 9:11 AM] m6lg6
+HOW
+
+
+[9/28/2026 9:11 AM] jajasteele
+i don't get it lol
+
+
+[9/28/2026 9:12 AM] m6lg6
+THE WORD SECRET
+
+
+[9/28/2026 9:12 AM] jajasteele
+is secret even possible to appear? my output file doesn't contain it so far
+
+
+[9/28/2026 9:13 AM] _neo____2
+Dude
+
+
+[9/28/2026 9:13 AM] m6lg6
+maybe
+
+
+[9/28/2026 9:13 AM] _neo____2
+Transformation
+
+
+[9/28/2026 9:13 AM] _neo____2
+Could it be it?
+
+
+[9/28/2026 9:13 AM] _neo____2
+Starts with T
+
+
+[9/28/2026 9:13 AM] m6lg6
+guess AI isn't useless after all
+
+
+[9/28/2026 9:14 AM] _neo____2
+I ain't confident this is the anwser
+
+
+[9/28/2026 9:14 AM] jajasteele
+i don't think transformation is possible
+
+
+[9/28/2026 9:15 AM] jajasteele
+r is ·−·
+
+
+[9/28/2026 9:15 AM] _neo____2
+But If the ai is giving something that we can relate to INSIDE even when I didn't mentioned inside to it could say something
+
+
+[9/28/2026 9:15 AM] _neo____2
+Oh yeah
+
+
+[9/28/2026 9:15 AM] _neo____2
+My bad
+
+
+[9/28/2026 9:15 AM] jajasteele
+well it's an LLM trained on a bunch of data, it could've stumbled on other people's repository of the sticker symbols or something, and guessed it from there lol
+
+
+[9/28/2026 9:16 AM] _neo____2
+Maybe
+
+
+[9/28/2026 9:16 AM] _neo____2
+I didn't really mention stickers
+
+
+[9/28/2026 9:16 AM] _neo____2
+I just gave it as a FMC
+
+
+[9/28/2026 9:16 AM] _neo____2
+Gotta keep trying
+
+
+[9/28/2026 9:17 AM] jajasteele
+Eh i think it's the kind of tasks where it'd mostly hallucinate more than anything lol
+
+
+[9/28/2026 9:17 AM] jajasteele
+i might just leave my program running while i sleep
+
+
+[9/28/2026 9:17 AM] jajasteele
+and hope i don't somehow run out of memory
+
+
+[9/28/2026 9:18 AM] jajasteele
+it's already using 13gb of ram lmao
+
+
+[9/28/2026 9:20 AM] _neo____2
+Me too
+
+{Reactions}
+🎖️
+
+[9/28/2026 9:20 AM] _neo____2
+I didn't sleep since I began the first morse hypothesis
+
+
+[9/28/2026 9:21 AM] _neo____2
+I think it's serveral letters tho
+
+
+[9/28/2026 9:27 AM] _neo____2
+I hope it's not anything in Danish
+
+
+[9/28/2026 9:27 AM] m6lg6
+me neither
+
+
+[9/28/2026 9:28 AM] _neo____2
+I asked the AI if it could be and it crashed 😅😅😅
+
+
+[9/28/2026 9:41 AM] _neo____2
+Seems like 32-38 could only be either the number 0 our the syllable "TO"
+
+
+[9/28/2026 9:43 AM] _neo____2
+"EK" is possible
+
+
+[9/28/2026 9:45 AM] _neo____2
+Tho the only 5 digit letter/number that can fit there is either 1,2,3,4 or 0
+
+
+[9/28/2026 9:45 AM] _neo____2
+I think it is a 2 digit syllable tho
+
+
+[9/28/2026 9:47 AM] _neo____2
+"AM" and "AN" are also possible
+
+
+[9/28/2026 9:49 AM] jajasteele
+I'll have another issue soon, the outpug file size is huge unless i compress it
+
+
+[9/28/2026 9:50 AM] jajasteele
+I'm not sure I'll be able to give a file of multiple gigs to any AI lol
+
+
+[9/28/2026 11:53 AM] 5vrtr
+Something about the idea of the stickers strikes me as odd. It's unreasonable to expect that every sticker would be left intact and I've heard speculation that it's a repeating pattern but it seems like desperation to me. I have an alternate solution: either brute force or pattern recognition. With enough stickers, it wouldn't be difficult to fill in the blanks, especially if someone had a program to speed up the process.
+
+
+[9/28/2026 11:54 AM] 5vrtr
+I'd suggest taking the longest string of stickers we have right now and see if there's any way to decipher them into a comprehensible string. If we can find a method that comes up with legible text, we might have an idea on what we're meant to be looking for.
+
+
+[9/28/2026 11:56 AM] 5vrtr
+The stickers seem like they're written in Morse code but this wouldn't make sense because, as I seem to recall, the longest string I was presented when I found this mystery in the Oddheader video included two / symbols in a row. Morse code uses the symbol to denote spacing between words or phrases, so it wouldn't make sense to be Morse code if that's the case, as far as I'm aware.
+
+
+[9/28/2026 11:57 AM] 5vrtr
+Which means it might not be a direct translation from Morse code. Ciphers like base64, I believe, use spaces as part of the cipher. Maybe it's Morse code and there's a second cipher lying underneath the initial Morse code. In which case, to be able to get pattern recognition running, we'd need to run it through both layers. Unless anyone's found a possibility outside of Morse code?
+
+
+[9/28/2026 11:59 AM] 5vrtr
+Another possibility is the numbers aren't indicative of a sequence and it's a red herring, which isn't out of the question, or the idea of an alternate sequence that isn't simple base addition, that a separate order needs to be found. Maybe the background images could be an indicator? I've forgotten what they were meant to represent.
+
+
+[9/28/2026 1:37 PM] wiitch.biitch
+If it is, I can try to help, I am Norwegian and its not that far from Danish so I know most of it!
+
+
+[9/28/2026 2:12 PM] drasticsun
+There is definitley a code, but I think the numbers tell us the order in which to put them and/or just a numbering system to tell people what numbered CE they got i.e CE 65
+
+
+[9/28/2026 2:38 PM] _neo____2
+Well, it would be great honestly, me and @Jaja Steele didn't got any really good results, but I will try options in both the E and T options as I call them (We don't know which of these two letters start the code)
+
+
+[9/28/2026 2:41 PM] wiitch.biitch
+Yeah, I've come to the same stop myself, but it is a start!
+
+
+[9/28/2026 2:41 PM] _neo____2
+It fits the Fractionated Morse Code interpretation we had earlier, it explain lone symbols between two "/", and the "//" in the 38/39, and 65/66 positions, as it would mean to words next to each other.
+
+ I do think it can be another kind of code, but, I think os better to rule out a possibility than to simply dive into another one
+
+
+[9/28/2026 2:52 PM] aabho
+imo it's very likely it's another printer code (if the picture of a printer wasn't enough) and people have guessed one of those before just through brute force and context clues
+
+
+[9/28/2026 2:52 PM] aabho
+MULTIPLEPROBESDISPATCHED, LIFEDETECTED, etc.
+space themed comms of some sort
+
+
+[9/28/2026 2:53 PM] aabho
+so if you assume the positions of characters are a short loop and in the right order, you could come up with some decent guesses
+
+
+[9/28/2026 2:54 PM] aabho
+iam8bit was also explicit about it being a hint, which could mean the arg is solvable *without* it
+
+
+[9/28/2026 3:25 PM] santiface
+What do you guys think of the idea of fractioned morse code? @DarkMatter @ЕropKol @BigDusty and you @BHKR first suggested it a few months ago: https://discord.com/channels/460626942190813184/463106924708233216/1504513543091916905
+
+
+[9/28/2026 3:56 PM] lime8159
+I'm not too sure about fractionated morse, for the same reason you can rule out other 3 bit encodings like ternary or trifid cipher, it would require an even spread of all 3 symbols throughout the puzzle, whereas in our case, it's almost certain that the dots only appear towards the end of the 108 symbols
+
+
+[9/28/2026 3:58 PM] lime8159
+I don't have any evidence for it, but I think it's more likely we've got two separate binary encodings, one for the dashes and slashes, and one for the dots and slashes
+
+
+[9/28/2026 4:01 PM] lime8159
+
+
+{Attachments}
+assets\image-0cf2f7590ad2f643.png
+
+
+[9/28/2026 5:32 PM] bigdusty.
+That is true if it was fractionated morse it wold have to be rearranged somehow. Also the frequency analysis doesn't line up great but our string is so short that frequency analysis doesn't tell us much. I've kind of landed on this is some sort of custom cipher is my best guess but I havent really looked at it in a long while.
+
+
+[9/28/2026 7:41 PM] jajasteele
+well apparently my script is still running after almost 9 hours
+
+and the uncompressed file is 500gb
+
+..yeah we need more stickers lmao, bruteforcing the third part is just way too big
+
+
+[9/28/2026 7:44 PM] wofsauge
+hi. i just joined to talk about this ARG a bit since i tried to find patterns in the collectors-edition ARG.
+i also came to the conclusion for the 108 entries and the 9 columns width, by overlapping the currently known data and using the image numberings as a guide. Given this pattern and our current maximum collectors-edition number of 597, there are at lease 630 collectors edition available, instead of the 500 mentioned in the git repo.
+The result is basically the same pattern as you have in that image, just with the latest github data included (row 2 cell 5, row 12, cell 3). 2 more data points that are now known that might help you 🙂
+In this screenshot you can see how many overlaps there currently are in the data if needed.
+i also naively tried rotating the data to maybe find a hidden pixel-art images, but that doesnt result in anything sadly 🤷
+
+{Attachments}
+assets\image-46fb014a5106a920.png
+
+
+[9/28/2026 8:34 PM] auxcirity
+I'm new here what do these colours represent
+
+
+[9/28/2026 9:21 PM] panoramic_activity
+This mght be a stupid question but, since the stickers are most likely a repeating message, is it possible that the reason why there are so many is because some contains one of those translucent image behind the "/-." when arranged?
+
+
+[9/28/2026 9:38 PM] _neo____2
+I am trying those out, I made a few combinations today with the T being the first letter, eliminated a dozen by brute force
+
+
+[9/28/2026 9:38 PM] _neo____2
+I am doing it separating it as words
+
+
+[9/28/2026 9:39 PM] _neo____2
+1-7 could for the syllable "TO", is the only only that allows something, given that S03 is a -
+
+
+[9/28/2026 9:40 PM] _neo____2
+I am too tired to type but by the morning I wil write down my thoughts
+
+
+[9/28/2026 9:42 PM] _neo____2
+How do we know about the 630 number? I mean, it's a fact that there's more than 600 CE, but the biggest numbered sticker we have is 597.
+
+
+[9/28/2026 9:42 PM] santiface
+https://cdn.discordapp.com/attachments/461275582970462209/1504042576183824514/2_with_legend_multi_period_9x12_cs256.png?ex=6abc240d&is=6abad28d&hm=34c80bc4ffb823a67cf0a696e3bb090d74dd1ad9414a892c3e85de48620c3c80&
+
+{Embed}
+https://cdn.discordapp.com/attachments/461275582970462209/1504042576183824514/2_with_legend_multi_period_9x12_cs256.png?ex=6abc240d&is=6abad28d&hm=34c80bc4ffb823a67cf0a696e3bb090d74dd1ad9414a892c3e85de48620c3c80&
+assets\2_with_legend_multi_period_9x12_cs256-e779914e2f845e90.png
+
+{Reactions}
+🔥
+
+[9/28/2026 9:42 PM] auxcirity
+Ty
+
+
+[9/28/2026 9:44 PM] meowerthetruesigma
+i see this turning into minecraft seed finding at this point ,sharing compute platform to brute force the good sequence
+
+
+[9/28/2026 9:45 PM] jajasteele
+the issue is that there's a huge amount of valid combinations, what would sort them out is trying to filter by sentences that makes sense (but besides using an AI i don't see how it could be done by computer)
+
+
+[9/28/2026 9:46 PM] meowerthetruesigma
+yea still not viable because you dont know what a valid output looks like
+
+
+[9/28/2026 9:50 PM] aabho
+the context alone would help filter a lot of possibilities, being space-exploration themed
+
+
+[9/28/2026 9:51 PM] aabho
+or maybe something that looks like a terminal command
+
+
+[9/28/2026 9:52 PM] jajasteele
+yeah but like, i had hundreds of millions (maybe billions, i didn't look at the number) of possibilities when i stopped the script, and it wasn't even done
+
+
+[9/28/2026 9:52 PM] jajasteele
+though if we can get more word breaks (//) by finding more stickers, it would help a lot
+
+
+[9/28/2026 9:53 PM] jajasteele
+the third part had a huge amount of possibilities because it's long and full of empty parts
+
+
+[9/28/2026 9:53 PM] jajasteele
+but for example the 1st and 2nd parts are much smaller , the first one had 500k possibilities and the 2nd part had only 12k possible outcomes
+
+
+[9/28/2026 9:54 PM] aabho
+yeah, I mean you could guess it's 2-3 words but it's a long shot. what if you made a list of likely words to filter through? previous ones had a verb as the last word too
+
+
+[9/28/2026 9:54 PM] jajasteele
+well i filter by English words right now
+
+
+[9/28/2026 9:54 PM] aabho
+that's a start
+
+
+[9/28/2026 9:54 PM] aabho
+heh
+
+
+[9/28/2026 9:55 PM] jajasteele
+i wonder why there such a huge gap in stickers near the end
+
+
+[9/28/2026 10:15 PM] _neo____2
+Either way we need more stickers
+
+
+[9/28/2026 10:15 PM] _neo____2
+Think that's ir for now
+
+
+[9/28/2026 10:15 PM] _neo____2
+We can't really blind guess anything
+
+
+[9/28/2026 10:16 PM] _neo____2
+I will try the FMC until I can't, then try another form of coding
+
+
+[9/28/2026 10:17 PM] _neo____2
+33 to 37 is a two letter syllable
+
+
+[9/28/2026 10:17 PM] _neo____2
+Or a number
+
+
+[9/28/2026 10:17 PM] _neo____2
+Especifically 1, 2, 3 ,4 or 0
+
+
+[9/28/2026 10:17 PM] _neo____2
+As S37 is a dash
+
+
+[9/28/2026 10:22 PM] _neo____2
+Considering the first letter could be a T
+
+
+[9/28/2026 10:22 PM] _neo____2
+An individual long word don't seem to fit this 38 space when considering the symbols we have alredy
+
+
+[9/28/2026 10:22 PM] _neo____2
+So it's probably two or more letters
+
+
+[9/28/2026 10:23 PM] _neo____2
+The only connective that makes sense is "TO"
+
+
+[9/28/2026 10:25 PM] _neo____2
+Folllwing from here the words reach, land escape, transform, reborn, born, become and arrive don't respect the sequence
+
+
+[9/28/2026 10:26 PM] _neo____2
+I think the next word break we have is 19/20
+
+
+[9/28/2026 10:26 PM] _neo____2
+Giving that 20 is a /
+
+
+[9/28/2026 10:27 PM] _neo____2
+But wouldn't the second part be basically useless if we don't have the first part?
+
+
+[9/28/2026 10:28 PM] jajasteele
+well alone sure, but we can try and make AI find coherent sentences using the outcomes of the 1st and 2nd part together
+
+
+[9/28/2026 10:29 PM] jajasteele
+tho the 3rd part is too big rn, so better hope we get another word break somewhere
+
+
+[9/28/2026 10:29 PM] _neo____2
+That wouldn't be biased?
+
+
+[9/28/2026 10:29 PM] _neo____2
+Like
+
+
+[9/28/2026 10:29 PM] _neo____2
+We may be looking for a scifi-ish sentence
+
+
+[9/28/2026 10:29 PM] _neo____2
+Or an INSIDE coded sentence
+
+
+[9/28/2026 10:30 PM] _neo____2
+We have to way to know which one to look for
+
+
+[9/28/2026 10:30 PM] jajasteele
+it's always better than looking at the million different outcomes by hand tbh lol
+
+
+[9/28/2026 10:30 PM] _neo____2
+I agree
+
+
+[9/28/2026 10:31 PM] _neo____2
+But tbf my efforts are focused just in this first part
+
+
+[9/28/2026 10:31 PM] _neo____2
+The 38 space sequence
+
+
+[9/28/2026 10:31 PM] _neo____2
+I guess it's a full message (I mean the full thing)
+
+
+[9/28/2026 10:31 PM] _neo____2
+Given the word break we have is a syllable
+
+
+[9/28/2026 10:32 PM] _neo____2
+Anyway I going to sleep
+
+
+[9/28/2026 10:32 PM] _neo____2
+Good luck
+
+
+[9/28/2026 10:32 PM] jajasteele
+lol goodnight
+
+
+[9/29/2026 2:10 AM] wofsauge
+630 is my initial guess, because its 9x70 and a fairly round number after the currently known highest number. 600 would be to low, as it makes the later 48 stickers rarer than the other.
+My second guess would be 648 because 108*6 = 648. So 6 complete sticker sets. 648 is pretty close to 650, which might be a very reasonable order size for producing custom stuff in factories. The 2 left over in this guessed calculation might then be for private use outside the ARG.
+
+
+[9/29/2026 2:14 AM] jajasteele
+Well if anyone's curious this is what i got from AI
+
+I gave it a file with all the possible english word(s) that could fit in the 1st and 2nd parts of the morse thing (not the 3rd part though, we need more stickers it's too big right now)
+
+{Attachments}
+assets\P1P2_Combinations-8a981ed047b0ac58.txt
+
+
+[9/29/2026 2:16 AM] jajasteele
+the 3rd part is pretty big though compared to part 1 and part 2, so that's only a tiny part of the potential full code , it doesn't help much lol, but i think it is interesting
+
+
+[9/29/2026 3:53 AM] darkmatter_11
+I think this channel could really use a pinned FAQ to help the newcomers. 😄
+
+
+[9/29/2026 3:53 AM] darkmatter_11 (pinned)
+**Frequently Asked Questions**
+
+**Q**: I think the symbols repeat every 108 stickers, has anyone noticed that?
+**A**: Yes, we've known that for about 5 years. That part is already solved, we're 99.9% sure of it. We don't know why Oddheader said otherwise.
+
+**Q**: Do you have the raw data of the known symbols of the 108-length string?
+**A**: `/ /--/ / /- -/-/ /--/- -- -  //-/   /-/// //- ///  - -  /- //  / //  /--- --/ ////   ./  .. .  ./..  /      `
+
+**Q**: What are those red-grey-yellow images that I keep seeing?
+**A**: Red=`-` grey=`/` yellow=`.` and we often split the 108-length string into 12 rows for easier visualization.
+
+**Q**: Why does the string start at sticker 0? Shouldn't it start at 1?
+**A**: We're quite sure it has to start at sticker 0 (mod 108), because the other puzzle involving the sticker backgrounds started at sticker 0 (mod 9) in the top left corner, see https://discord.com/channels/460626942190813184/462637922944811028/704767641499205693
+
+**Q**: Could it be just ordinary Morse? Because `. - /` look like Morse symbols.
+**A**: Unlikely. So far there are no dots in the first 85 characters of the 108-length string. These 3 symbols are just the aesthetics of this ARG.
+
+**Q**: This other cipher I found uses 3 different symbols, could it be that?
+**A**: Unlikely. Unless it can explain the dots at the end, it's probably not a ternary (3-symbol) encoding, see https://discord.com/channels/460626942190813184/1552077397493424272/1554205291682463766
+
+{Reactions}
+🔥 (6)
+
+[9/29/2026 3:54 AM] santiface
+Pinned a message.
+
+
+[9/29/2026 8:26 AM] raezores
+**From Reddit user ianmakesjokes:**
+
+https://docs.google.com/presentation/d/1F1Y4IIpdl8rPpGo8oieG7Wbpvnohplxr/edit?usp=drivesdk&ouid=102950763084548490984&rtpof=true&sd=true
+
+I've done some research into the sticker mystery. I was hoping you'd share it with the right people if you think it's worthwhile. I have some supporting technical documents as well.
+
+{Embed}
+https://docs.google.com/presentation/d/1F1Y4IIpdl8rPpGo8oieG7Wbpvnohplxr/edit?usp=drivesdk&ouid=102950763084548490984&rtpof=true&sd=true
+INSIDE Collector’s Edition Sticker Mystery — What I found, and ...
+1 INSIDE Collector’s Edition Sticker Mystery What I found, and what it might mean Progress on the sticker code — not the sticker hunt
+assets\AHkbwyLyGX4Kyr_iCMH_1b33Q-bngHNziEuzZXMzU9-453a2b0d5e7ac42d
+
+{Reactions}
+🔥
+
+[9/29/2026 8:26 AM] raezores
+https://drive.google.com/file/d/1R0JEewC2TitI2kTu7h8ijPC81buRR1-z/view?usp=drivesdk
+
+{Embed}
+https://drive.google.com/file/d/1R0JEewC2TitI2kTu7h8ijPC81buRR1-z/view?usp=drivesdk
+INSIDE_Sticker_Mystery_Supplementary_Evidence.csv
+
+
+[9/29/2026 8:26 AM] raezores
+https://docs.google.com/spreadsheets/d/1pM89E3A_GqJmsCCUdexENHtyg4HAT9-R/edit?usp=drivesdk&ouid=102950763084548490984&rtpof=true&sd=true
+
+{Embed}
+https://docs.google.com/spreadsheets/d/1pM89E3A_GqJmsCCUdexENHtyg4HAT9-R/edit?usp=drivesdk&ouid=102950763084548490984&rtpof=true&sd=true
+INSIDE_Sticker_Mystery_Verification_Pack.xlsx
+assets\AHkbwyIBmfIYgBT71SUpcMRXalbgkCnKdNx1EWrkP7-8b4ce3b907fb601b
+
+
+[9/29/2026 8:26 AM] raezores
+I'm not a discord user or part of the INSIDE community, so I just wanted to hand my progress to the community somehow, to see what it inspires from others.
+
+
+[9/29/2026 8:52 AM] lime8159
+this just seems like a lot of ai slop unfortunately
+
+
+[9/29/2026 9:01 AM] ghaith2025
+yea... I got lost reading in the first 2 minutes
+
+
+[9/29/2026 9:41 AM] raezores
+I mentioned he can join the server if he wants, but idk what I’m looking at, so I just did as he wished and shared it here in case it was anything haha
+
+
+[9/29/2026 9:42 AM] raezores
+And then just let you smart guys look at it👀 Whatever it means and is
+
+
+[9/29/2026 9:52 AM] darkmatter_11
+The weird part is labelling it as "my progress" and "I've done some research". I feel that has been a recurring issue lately here in the server too. Maybe we could add something to the server rules about disclosing AI usage?
+
+
+[9/29/2026 9:55 AM] raezores
+Hmm ye you’re right, I didn’t think about that🤔
+
+
+[9/29/2026 10:02 AM] m6lg6
+where r u evening finding this stuff dude?
+
+
+[9/29/2026 10:06 AM] raezores
+He sent it to me in Reddit DM randomly, probably after this post from Twinysam on Reddit: https://www.reddit.com/r/PlaydeadsInside/s/4x0afK38Cd
+
+{Embed}
+r/PlaydeadsInside
+https://www.reddit.com/r/PlaydeadsInside/s/4x0afK38Cd
+PSA: You DON'T need to open your INSIDE Collector's Edition to shar...
+Lots of people are being drawn to the multiple remaining mysteries of INSIDE thanks to Oddheader's latest video , yet check the highlighted comment…
+assets\1wruv2d-5f94aa4f46b05da9
+Reddit
+
+{Reactions}
+👍
+
+[9/29/2026 10:39 AM] raezores
+He is joining the server now soon I think
+
+
+[9/29/2026 10:59 AM] ianmakesjokes
+Hey folks. Here's v2 of the findings and data I can offer. 
+
+I designed and directed this research program and used AI to organize and manage experimental implementation, compute and results, and to build the presentation documents. I worked carefully to safeguard against AI hallucinations and nonsense, and the supplementary spreadsheets are intended to demonstrate how data has been rigourously collected, confirmed and generated during the project.
+
+{Attachments}
+assets\INSIDE_Sticker_Mystery_Verification_Pack_v-4b74c6a0a2578c3a.xlsx
+assets\INSIDE_Collector_Edition_Sticker_Mystery_v-7dd048e2dadc3a79.pptx
+
+{Reactions}
+👋
+
+[9/29/2026 11:03 AM] ianmakesjokes
+If anyone would like to see my GitHub repo or aim your agents at it, it's at https://github.com/gamesbyian/GRA-EDISNI/
+
+PR Descriptions will further explain experimental methodology and rigour.
+
+{Reactions}
+👍
+
+[9/29/2026 11:27 AM] ianmakesjokes
+if anyone has any other documents or recap posts about work the community has done, I'd really like to be pointed to them. Alas, your group's efforts aren't very visible to the wider Internet for non-Discord users.
+
+{Reactions}
+👍
+
+[9/29/2026 11:33 AM] m6lg6
+hey ian how much work did u put 2 dis?
+
+
+[9/29/2026 11:37 AM] ianmakesjokes
+About 3 days so far
+
+{Reactions}
+👍
+
+[9/29/2026 11:37 AM] m6lg6
+pretty good
+
+{Reactions}
+😀
+
+[9/29/2026 12:22 PM] ianmakesjokes
+I’d like to make a one-time searchable archive of the  discussion here as a research resource, if admins will permit.
+
+I won't share the data anywhere public and I'll anonymize it before I save my own copy or share it with the group.
+
+I made a small read-only bot called Inside ARG scraper. It only asks for View Channel and Read Message History, and it won’t post or change anything. You can restrict it to just the channels/categories you’re comfortable with.
+
+I’ll run it once, grab the ARG discussion and attachments I need, then it can be removed.
+
+Install link:
+https://discord.com/oauth2/authorize?client_id=1554511795320914060&scope=bot&permissions=66560
+
+Thanks!
+
+
+[9/29/2026 2:29 PM] santiface
+Hi there Ian. I recently uploaded a big data dump of exports from this server to Github so that people can unleash their tokens on them and more easier get up to speed. It includes images: [github.com/twinysam/playdead-unofficial-exports](http://github.com/twinysam/playdead-unofficial-exports)
+
+{Reactions}
+❤️
+
+[9/29/2026 2:30 PM] santiface
+yeah this is what I did
+
+
+[9/29/2026 2:31 PM] ianmakesjokes
+Wonderful thanks!
+
+
+[9/29/2026 2:37 PM] wakerra
+Curiously passing into this sticker thing, I only see 60ish stickers documented on GitHub, but the FAQ says you 80?  Where is the full and current list of symbols?
+
+
+[9/29/2026 2:37 PM] ianmakesjokes
+I dont see a  stickers-solving channel export in the repo... Am I missing it or can that be added? @Twinysam
+
+
+[9/29/2026 2:40 PM] raezores
+https://github.com/twinysam/INSIDE-ARG/blob/master/stickers.md
+
+
+[9/29/2026 2:41 PM] santiface
+The stickers-solving channel is brand new. I can add it, but it's honestly easier to just manually browser it still
+
+
+[9/29/2026 2:42 PM] santiface
+the bulk of the work should be in #solving
+
+
+[9/29/2026 2:43 PM] ianmakesjokes
+Ahhh lovely. I'd still love it if you could add it at your convenience, assuming running the bot isn't too bothersome a process.
+
+
+[9/29/2026 2:45 PM] santiface
+Sure
+
+{Reactions}
+❤️
+
+[9/29/2026 2:52 PM] wakerra
+So question: I'm looking at the l previous arg strings and their correlating images, but the color codes aren't matching up?  I don't know if I'm just missing something somewhere?
+
+
+[9/29/2026 2:54 PM] wakerra
+The top line here doesn't match anywhere with the top of the acorn
+
+{Attachments}
+assets\Screenshot_20260929-115401-042-28c0f2189bad14e9.png
+assets\Screenshot_20260929-115414-439-c0d8615865065df3.png
+
+
+[9/29/2026 3:14 PM] lime8159
+You swap the rows around to form the acorn image
+
+
+[9/29/2026 3:34 PM] wakerra
+So it's just part of the puzzle to figuring the order of placement of each row?
+
+
+[9/29/2026 4:27 PM] lime8159
+yes, the alternating pixels on either side of the acorn image help you figure out the order aswell
+
+{Reactions}
+👍
+
+==============================================================
+Exported 516 message(s)
+==============================================================

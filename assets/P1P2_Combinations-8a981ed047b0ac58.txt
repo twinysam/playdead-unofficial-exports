@@ -1,0 +1,45 @@
+SENSIBLE COMBINATIONS  (Part 1 line + Part 2 line)
+==================================================
+
+Format:   PART1 LINE  +  PART2 LINE   =>   sentence
+
+NOTE: Part 1 has 536,300 lines and Part 2 has 11,899 lines, so there are
+about 6.4 billion possible pairs. That is far too many to read, so the pairs
+were narrowed down automatically (word-pair likelihood scoring, a grammar
+check, and a theme filter) and then reviewed by hand. This is a shortlist of
+the best matches found, not a guaranteed-complete list.
+
+
+--- COMPUTER-RELATED: clear, sensible sentences ---
+
+ETHERNET PORT     +  IS NO USE      =>  Ethernet port is no use
+ETHERNET PORT     +  IS A PART      =>  Ethernet port is a part
+ETHERNET PORT     +  IS WORSE       =>  Ethernet port is worse
+ETHERNET PORT     +  CAN LAST       =>  Ethernet port can last
+TOOLS DO NOT      +  USE CODE       =>  Tools do not use code
+TOOLS NEED TO     +  USE CODE       =>  Tools need to use code
+TOOLS DO NOT      +  MENTION IT     =>  Tools do not mention it
+TOOLS GIVE A      +  PACKAGE        =>  Tools give a package
+EMAIL ANY NEW     +  PACKAGE        =>  Email any new package
+ECHO ANY NEW      +  PACKAGE        =>  Echo any new package
+ENSURE THAT IT    +  IS NO TEST     =>  Ensure that it is no test
+ENSURE THAT IT    +  IS A LIST      =>  Ensure that it is a list
+ENSURE THAT IT    +  IS A PAGE      =>  Ensure that it is a page
+EXPORT OF IT      +  IS NO USE      =>  Export of it is no use
+
+
+--- COMPUTER-RELATED: grammatical but weaker / more awkward ---
+
+ETHERNET PORT     +  CAN GET IT     =>  Ethernet port can get it
+ENSURE THAT IT    +  CAN LIST       =>  Ensure that it can list
+ETHERNET PORT     +  SET APART      =>  Ethernet port set apart          (fragment)
+TO DELETE A NEW   +  PACKAGE        =>  To delete a new package          (fragment)
+
+
+--- SPACE / INSIDE (ARG) ---
+
+No convincing sentences were found for these themes. The vocabulary does
+contain words like MOON, ALIEN, ATOM, RADAR, DOOR, ROOM, DREAM, DEATH, EDEN,
+EMMA, ENTITY and ENEMY, but every pairing that included them was
+ungrammatical or nonsensical (e.g. "Ensure that it is atom it",
+"Ensure that it alien art"), so none are listed as valid.

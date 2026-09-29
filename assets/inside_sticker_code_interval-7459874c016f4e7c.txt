@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int A[600];
+    for(int i=0;i<600;i++)
+    {
+		A[i]=0;    
+    }
+A[2]=1,A[3]=2,A[20]=1,A[21]=2,A[32]=1,A[37]=2,A[38]=1,A[39]=1,A[47]=1,A[53]=2,A[59]=1,A[63]=1,A[65]=1,A[66]=1,A[72]=2,A[92]=3,A[95]=3,A[97]=3,A[118]=2,A[123]=1,A[125]=1,A[126]=2,A[132]=2,A[154]=1,A[156]=1,A[164]=1,A[171]=1,A[178]=2,A[179]=2,A[182]=2,A[183]=2,A[184]=1,A[187]=1,A[193]=3,A[194]=1,A[206]=3,A[221]=1,A[223]=1,A[231]=1,A[242]=2,A[245]=1,A[247]=2,A[248]=1,A[252]=1,A[258]=1,A[263]=1,A[267]=2,A[282]=1,A[296]=1,A[306]=3,A[312]=1,A[317]=1,A[324]=1,A[328]=2,A[333]=1,A[334]=2,A[336]=2,A[338]=2,A[339]=1,A[343]=2,A[347]=2,A[354]=1,A[362]=1,A[364]=1,A[366]=1,A[375]=2,A[384]=1,A[393]=1,A[402]=1,A[405]=1,A[413]=3,A[436]=2,A[444]=2,A[445]=1,A[449]=1,A[450]=2,A[469]=2,A[470]=1,A[475]=1,A[476]=2,A[478]=1,A[597]=2;   // /is 1 -is 2 .is 3
+	int match=0;
+    bool fail=false;
+    for(int i=1;i<300;i++){
+    	for(int j=0;j<600;j++){
+        	if (j+i>599)
+            	continue;
+        	else if(A[j]==0||A[j+i]==0){
+            	continue;
+            	}
+            else if(A[j]==A[j+i]){
+            	match=match+1;
+                continue;
+            	}
+            else if(A[j]!=A[j+i]){
+            	fail=true;
+                break;
+        		}
+        	}
+    	if(fail==true||match==0){
+    		fail=false;
+            match=0;
+            continue;
+        	}
+        else if (fail==false||match>0){
+        	cout << "modular " << i << " matches = " << match << " total number of stikers = " << i-(597%i) + 597 << "\n";
+            fail=false;
+            match=0;
+            continue;
+        	}
+		}
+    cout << "end";
+    
+	}
+
+
+
+
